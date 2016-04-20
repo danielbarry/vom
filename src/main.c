@@ -49,7 +49,9 @@ void main_loop(){
   display_init();
   /* TODO: Write this code. */
   while(running){
+    /* Update the display */
     display_update();
+    /* Get the next character */
     char chr = display_get_char();
     if(chr == 'q'){
       running = false;
