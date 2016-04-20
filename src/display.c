@@ -32,6 +32,11 @@ void display_init(){
   window = initscr();
   /* Find out whether the display supports colours */
   colours = has_colors() == TRUE;
+  /* Don't waste time with colours if they are not supported */
+  if(colours){
+    /* Start the colour functionality */
+    start_color();
+  }
   /* Turn off wait for enter key */
   cbreak();
   /* Stop echo to the terminal */
