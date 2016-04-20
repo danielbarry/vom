@@ -29,10 +29,21 @@ int main(int argc, char** argv){
   main_loop();
 }
 
+/**
+ * main_init()
+ *
+ * Initialise the main code.
+ **/
 void main_init(){
   running = true;
 }
 
+/**
+ * main_loop()
+ *
+ * This is the method that runs the main code, with each loop defined by a key
+ * press.
+ **/
 void main_loop(){
   /* Initialise the display */
   display_init();
