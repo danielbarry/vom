@@ -1,3 +1,12 @@
+/**
+ * display.c
+ *
+ * The display handles the direct requirements of displaying to the terminal
+ * and provides and method for abstracting away.
+ *
+ * @author B[]
+ **/
+
 /* Includes */
 #include <curses.h>
 

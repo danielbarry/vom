@@ -1,3 +1,12 @@
+/**
+ * main.c
+ *
+ * The main entry point to the program, responsible for handling command line
+ * inputs and system logic.
+ *
+ * @author B[]
+ **/
+
 /* Includes */
 #include "layout.c"
 #include <stdio.h>

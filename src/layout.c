@@ -1,3 +1,12 @@
+/**
+ * layout.c
+ *
+ * This represents the layout manager for how the system will be laid out onto
+ * the display.
+ *
+ * @author B[]
+ **/
+
 /* Includes */
 #include "display.c"
 
