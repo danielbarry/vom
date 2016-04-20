@@ -27,6 +27,14 @@ To install the required packages, please run the following (Debian):
 
     sudo apt-get install gcc git libncurses5-dev pandoc
 
+  * `gcc` - Allows compilation of the source code
+  * `git` - Access to the repositiory
+  * `libncurses5-dev` - Library for the UI of the text editor
+  * `pandoc` - Allows compilation of the documentation
+
+If you require more libraries or this documentation is out of date for any
+reason, please contact me.
+
 ## (4) Build
 
 ### Code
