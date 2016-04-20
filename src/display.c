@@ -1,5 +1,12 @@
 #include <curses.h>
 
+/* Definitions */
+#define COLOUR_NORM  1 /* White */
+#define COLOUR_NUMS  2 /* Yellow */
+#define COLOUR_MATH  4 /* Maroon */
+#define COLOUR_PAIR  8 /* Turquoise */
+#define COLOUR_OTHR 16 /* Red */
+
 /* Methods */
 void display_init();
 void display_update();
