@@ -1,3 +1,4 @@
+/* Includes */
 #include "display.c"
 #include <stdio.h>
 

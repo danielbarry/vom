@@ -1,3 +1,4 @@
+/* Includes */
 #include <curses.h>
 
 /* Definitions */
