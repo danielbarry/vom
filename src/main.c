@@ -1,5 +1,5 @@
 /* Includes */
-#include "display.c"
+#include "layout.c"
 #include <stdio.h>
 
 /* Definitions */
@@ -112,7 +112,7 @@ void main_init(){
  **/
 void main_loop(){
   /* Initialise the display */
-  display_init();
+  layout_init();
   /* TODO: Write this code. */
   while(running){
     /* Update the display */
