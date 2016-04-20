@@ -1,5 +1,10 @@
 #include "display.c"
 
+/* Definitions */
+#define MODE_CMD 1
+#define MODE_TYP 2
+#define MODE_INS 4
+
 /* Methods */
 void main_init();
 void main_loop();
