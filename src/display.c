@@ -21,6 +21,11 @@ WINDOW* window;
 unsigned int width;
 unsigned int height;
 
+/**
+ * display_init()
+ *
+ * Initialise the display.
+ **/
 void display_init(){
   /* Initialise the display */
   window = initscr();
@@ -32,6 +37,11 @@ void display_init(){
   clear();
 }
 
+/**
+ * display_update()
+ *
+ * Update the display.
+ **/
 void display_update(){
   /* Update the display dimensions */
   display_update_dimensions();
@@ -41,21 +51,48 @@ void display_update(){
   refresh();
 }
 
+/**
+ * display_get_char()
+ *
+ * Get the next character from the keyboard buffer in the terminal.
+ *
+ * @return The character collected from the keyboard buffer.
+ **/
 char display_get_char(){
   /* Returns a character */
   return getch();
 }
 
+/**
+ * display_quit()
+ *
+ * Releases the display to the next program.
+ **/
 void display_quit(){
   /* Restore the original window */
   endwin();
 }
 
+/**
+ * display_update_dimensions()
+ *
+ * Updates the dimensions of the display to be used to determine feature
+ * positions.
+ **/
 void display_update_dimensions(){
   /* Update the width and height */
   getmaxyx(window, height, width);
 }
 
+/**
+ * display_draw()
+ *
+ * Draws a character at a given position with a given attribute.
+ *
+ * @param x The X position to draw at.
+ * @param y The Y position to draw at.
+ * @param c The character to be draw at the given position.
+ **/
 void display_draw(unsigned int x, unsigned int y, char c){
   /* Get character to given position */
   move(x, y);
