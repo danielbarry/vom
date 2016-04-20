@@ -11,6 +11,7 @@ void main_loop();
 
 /* Variables */
 bool running;
+unsigned int mode;
 
 /**
  * main()
