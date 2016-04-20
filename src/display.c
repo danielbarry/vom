@@ -14,6 +14,7 @@ char display_get_char();
 void display_quit();
 void display_update_dimensions();
 void display_draw(unsigned int x, unsigned int y, char c);
+void display_colourize(char c);
 
 /* Variables */
 WINDOW* window;
@@ -62,4 +63,32 @@ void display_draw(unsigned int x, unsigned int y, char c){
   delch();
   /* Insert a new character into the new position */
   insch(c);
+}
+
+/**
+ * display_colourize()
+ *
+ * Colourize the output based on the characters to be displayed.
+ *
+ * @param c The character being displayed.
+ **/
+void display_colourize(char c){
+  int attribute = COLOUR_NORM;
+  if(c >= '0' && c <= '9'){
+    attribute = COLOUR_NUMS;
+  }
+  if(c >= '*' && c <= '/'){
+    attribute = COLOUR_MATH;
+  }
+  if(
+    (c >= '(' && c <= ')') ||
+    (c >= '[' && c <= ']') ||
+    (c >= '{' && c <= '}')
+  ){
+    attribute = COLOUR_PAIR;
+  }
+  if(c >= '!' && c <= '&'){
+    attribute = COLOUR_OTHR;
+  }
+  attron(COLOR_PAIR(attribute));
 }
