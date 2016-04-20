@@ -1,4 +1,5 @@
 #include "display.c"
+#include <stdio.h>
 
 /* Definitions */
 #define VER_MAJ  0
