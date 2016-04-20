@@ -122,13 +122,45 @@ void main_loop(){
     /* Operation based on current mode */
     switch(mode){
       case MODE_CMD :
-        /* TODO: Write this code. */
+        /* Figure out what is to be done */
+        switch(chr){
+          case 27 :
+            /* Go to type mode if escape pressed */
+            mode = MODE_TYP;
+            break;
+          case 'i' :
+            /* Switch to insert mode */
+            mode = MODE_INS;
+            break;
+          default :
+            /* Do nothing */
+            break;
+        }
         break;
       case MODE_TYP :
-        /* TODO: Write this code. */
+        /* Figure out what is to be done */
+        switch(chr){
+          case 27 :
+            /* Go to back to command mode if escape pressed */
+            mode = MODE_CMD;
+            break;
+          default :
+            /* TODO: Requires printing. */
+            break;
+        }
+        break;
         break;
       case MODE_INS :
-        /* TODO: Write this code. */
+        /* Figure out what is to be done */
+        switch(chr){
+          case 27 :
+            /* Go to command mode if escape pressed */
+            mode = MODE_CMD;
+            break;
+          default :
+            /* TODO: Requires printing. */
+            break;
+        }
         break;
       default :
         /* TODO: Handle error in some way. */
