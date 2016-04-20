@@ -43,6 +43,12 @@ void display_init(){
   noecho();
   /* Clear the display */
   clear();
+  /* Initialise the colours */
+  init_pair(COLOUR_NORM, COLOR_WHITE,   COLOR_BLACK);
+  init_pair(COLOUR_NUMS, COLOR_YELLOW,  COLOR_BLACK);
+  init_pair(COLOUR_MATH, COLOR_MAGENTA, COLOR_BLACK);
+  init_pair(COLOUR_PAIR, COLOR_CYAN,    COLOR_BLACK);
+  init_pair(COLOUR_OTHR, COLOR_RED,     COLOR_BLACK);
 }
 
 /**
