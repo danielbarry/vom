@@ -28,8 +28,41 @@ unsigned int mode;
  * @param argv The parameters that were passed to the program.
  **/
 int main(int argc, char** argv){
-  main_init();
-  main_loop();
+  /* Iterate through the program arguments */
+  for(int x = 1; x < argc; x++){
+    /* Get length of current argument */
+    /* NOTE: We can assume that at least one character was collected otherwise
+     *       it wouldn't have been added to the list of arguments. */
+    int len = sizeof(argv[x]) / sizeof(argv[x][0]);
+    /* Test if first character is argument or file */
+    if(argv[x][0] == '-'){
+      /* Run through the arguments */
+      for(int z = 0; z < len; z++){
+        /* Do task based on parameter */
+        switch(argv[x][z]){
+          case 'h' :
+            /* Display help */
+            main_help();
+            break;
+          case 'v' :
+            /* Display version */
+            main_version();
+            break;
+          default :
+            /* TODO: Handle error. */
+            break;
+        }
+      }
+    }else{
+      /* Initialise the main program */
+      main_init();
+      /* Look over character for main program control */
+      main_loop();
+      /* TODO: Load file. */
+      /* Force loop exit */
+      x = len;
+    }
+  }
 }
 
 /**
