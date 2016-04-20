@@ -9,6 +9,8 @@
 #define MODE_INS 4
 
 /* Methods */
+void main_help();
+void main_version();
 void main_init();
 void main_loop();
 
@@ -27,6 +29,35 @@ unsigned int mode;
 int main(int argc, char** argv){
   main_init();
   main_loop();
+}
+
+/**
+ * main_help()
+ *
+ * Display help for this program to the terminal over the standard output.
+ **/
+void main_help(){
+  printf("\nvom [OPT] [FILE]");
+  printf("\n");
+  printf("\n  OPTions");
+  printf("\n");
+  printf("\n    -h    Displays the help.");
+  printf("\n    -v    Displays the version.");
+  printf("\n");
+  printf("\n  FILE");
+  printf("\n");
+  printf("\n    A file to be loaded form disk.");
+  printf("\n");
+}
+
+/**
+ * main_version()
+ *
+ * Display the version of this program to the terminal over the standard
+ * output.
+ **/
+void main_version(){
+  printf("\nver %i.%i.%i\n", VER_MAJ, VER_MIN, VER_PAT);
 }
 
 /**
