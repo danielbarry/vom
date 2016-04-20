@@ -18,6 +18,7 @@ void display_colourize(char c);
 
 /* Variables */
 WINDOW* window;
+bool colours;
 unsigned int width;
 unsigned int height;
 
@@ -29,6 +30,8 @@ unsigned int height;
 void display_init(){
   /* Initialise the display */
   window = initscr();
+  /* Find out whether the display supports colours */
+  colours = has_colors() == TRUE;
   /* Turn off wait for enter key */
   cbreak();
   /* Stop echo to the terminal */
