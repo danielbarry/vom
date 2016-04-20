@@ -102,6 +102,11 @@ void display_update_dimensions(){
  * @param c The character to be draw at the given position.
  **/
 void display_draw(unsigned int x, unsigned int y, char c){
+  /* Only update colours if they are supported */
+  if(colours){
+    /* Colourize characters as they come through */
+    display_colourize(c);
+  }
   /* Get character to given position */
   move(x, y);
   /* Delete the character currently in the position */
