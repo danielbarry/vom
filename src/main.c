@@ -1,6 +1,9 @@
 #include "display.c"
 
 /* Definitions */
+#define VER_MAJ  0
+#define VER_MIN  0
+#define VER_PAT  1
 #define MODE_CMD 1
 #define MODE_TYP 2
 #define MODE_INS 4
