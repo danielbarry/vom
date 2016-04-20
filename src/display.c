@@ -16,6 +16,8 @@ void display_quit();
 void display_update_dimensions();
 void display_draw(unsigned int x, unsigned int y, char c);
 void display_colourize(char c);
+unsigned int display_get_width();
+unsigned int display_get_width();
 
 /* Variables */
 WINDOW* window;
@@ -155,4 +157,26 @@ void display_colourize(char c){
     attribute = COLOUR_OTHR;
   }
   attron(COLOR_PAIR(attribute));
+}
+
+/**
+ * display_get_width()
+ *
+ * Gets the width of the terminal.
+ *
+ * @return The width of the terminal.
+ **/
+unsigned int display_get_width(){
+  return width;
+}
+
+/**
+ * display_get_height()
+ *
+ * Gets the height of the terminal.
+ *
+ * @return The height of the terminal.
+ **/
+unsigned int display_get_height(){
+  return height;
 }
