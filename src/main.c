@@ -53,8 +53,20 @@ void main_loop(){
     display_update();
     /* Get the next character */
     char chr = display_get_char();
-    if(chr == 'q'){
-      running = false;
+    /* Operation based on current mode */
+    switch(mode){
+      case MODE_CMD :
+        /* TODO: Write this code. */
+        break;
+      case MODE_TYP :
+        /* TODO: Write this code. */
+        break;
+      case MODE_INS :
+        /* TODO: Write this code. */
+        break;
+      default :
+        /* TODO: Handle error in some way. */
+        break;
     }
   }
   /* Release the display */
