@@ -69,11 +69,11 @@ void display_init(){
  * Update the display.
  **/
 void display_update(){
-  /* Update the display dimensions */
-  display_update_dimensions();
   /* TODO: Write this code. */
   /* Refresh the display */
   refresh();
+  /* Update the display dimensions */
+  display_update_dimensions();
 }
 
 /**
