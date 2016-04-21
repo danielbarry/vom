@@ -215,7 +215,8 @@ void main_loop(){
         }
         break;
       default :
-        /* TODO: Handle error in some way. */
+        /* Message an error */
+        layout_set_type_buffer(MSG_BAD);
         break;
     }
   }
