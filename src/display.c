@@ -67,9 +67,17 @@ void display_init(){
  * display_update()
  *
  * Update the display.
+ *
+ * @param buffer The buffer to be used to update the display.
+ * @param len The length of the buffer.
  **/
-void display_update(){
-  /* TODO: Write this code. */
+void display_update(char* buffer, unsigned int len){
+  /* Display characters to the display */
+  for(unsigned int x = 0; x < len; x++){
+    /* Draw the buffer */
+    /* TODO: Modulo and divide are very costly. */
+    display_draw(x / width, x % width, buffer[x]);
+  }
   /* Refresh the display */
   refresh();
   /* Update the display dimensions */
