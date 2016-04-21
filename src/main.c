@@ -200,7 +200,6 @@ void main_loop(){
             break;
         }
         break;
-        break;
       case MODE_INS :
         /* Figure out what is to be done */
         switch(chr){
