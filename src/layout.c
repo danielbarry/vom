@@ -49,6 +49,8 @@ char layout_get_char(){
  * Updates the layout.
  **/
 void layout_update(){
+  /* Length of the bag */
+  unsigned int len = display_get_width() * display_get_height();
 }
 
 /**
