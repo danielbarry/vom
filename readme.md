@@ -4,9 +4,10 @@
 
   * (1) Contents
   * (2) Introduction
-  * (3) Environment
-  * (4) Build
-  * (5) About
+  * (3) Use
+  * (4) Environment
+  * (5) Build
+  * (6) About
 
 ## (2) Introduction
 
@@ -21,7 +22,15 @@ The following are the main goals of the program:
   * Fast
   * Low RAM usage (even for large files)
 
-## (3) Environment
+## (3) Use
+
+Below is some examples of the system in use:
+
+![Insert Mode](img/mode-ins.png)
+
+![Command Mode](img/mode-cmd.png)
+
+## (4) Environment
 
 To install the required packages, please run the following (Debian):
 
@@ -35,7 +44,7 @@ To install the required packages, please run the following (Debian):
 If you require more libraries or this documentation is out of date for any
 reason, please contact me.
 
-## (4) Build
+## (5) Build
 
 ### Code
 
@@ -56,6 +65,6 @@ output you require:
 
     pandoc readme.md -s -o readme.html
 
-## (5) About
+## (6) About
 
 Written by B[].
