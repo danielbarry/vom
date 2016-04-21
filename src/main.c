@@ -141,8 +141,10 @@ void main_loop(){
       case MODE_CMD :
         /* Figure out what is to be done */
         switch(chr){
-          case 27 :
-            /* Go to type mode if escape pressed */
+          case ':' :
+            /* Print the command character */
+            layout_update_type(chr);
+            /* Go to type mode if colon pressed */
             mode = MODE_TYP;
             break;
           case 'i' :
