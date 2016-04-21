@@ -189,6 +189,8 @@ void main_loop(){
             }
             break;
           case 27 :
+            /* Clear output */
+            layout_clear_type_buffer();
             /* Go to back to command mode if escape pressed */
             mode = MODE_CMD;
             break;
