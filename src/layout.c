@@ -58,7 +58,9 @@ char layout_get_char(){
  **/
 void layout_update(){
   /* Length of the bag */
-  unsigned int len = display_get_width() * display_get_height();
+  unsigned int width = display_get_width();
+  unsigned int height = display_get_height();
+  unsigned int len = width * height;
   /* Build a buffer of the right size */
   char* buffer = (char*)malloc(len * sizeof(char));
   /* TODO: Remove these lines. */
