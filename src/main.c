@@ -127,7 +127,7 @@ void main_loop(){
     /* Update the display */
     layout_update();
     /* Get the next character */
-    char chr = display_get_char();
+    char chr = layout_get_char();
     /* Operation based on current mode */
     switch(mode){
       case MODE_CMD :
@@ -177,5 +177,5 @@ void main_loop(){
     }
   }
   /* Release the display */
-  display_quit();
+  layout_quit();
 }
