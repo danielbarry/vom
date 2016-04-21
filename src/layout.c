@@ -17,6 +17,11 @@
 /* Methods */
 void layout_init();
 char layout_get_char();
+void layout_update();
+void layout_update_type(char c);
+char* layout_get_type_buffer();
+unsigned int layout_get_type_length();
+void layout_clear_type_buffer();
 
 /* Variables */
 unsigned int curX;
@@ -128,4 +133,36 @@ void layout_update_type(char c){
       typeLen++;
     }
   }
+}
+
+/**
+ * layout_get_type_buffer()
+ *
+ * Gets the characters from the type buffer.
+ *
+ * @return The character buffer of the type buffer.
+ **/
+char* layout_get_type_buffer(){
+  return typeBuffer;
+}
+
+/**
+ * layout_get_type_length()
+ *
+ * Gets the length of the type buffer.
+ *
+ * @return The length of the type buffer.
+ **/
+unsigned int layout_get_type_length(){
+  return typeLen;
+}
+
+/**
+ * layout_clear_type_buffer()
+ *
+ * Clear the buffer of the type buffer by setting the collection down to zero.
+ **/
+void layout_clear_type_buffer(){
+  /* Set collection point back down to zero */
+  typeLen = 0;
 }
