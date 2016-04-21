@@ -25,6 +25,11 @@ void main_version();
 void main_init();
 void main_loop();
 
+/* Constants */
+char* MSG_INS = (char*)"-- INSERT --";
+char* MSG_ERR = (char*)"Error in command.";
+char* MSG_BAD = (char*)"Major error in program.";
+
 /* Variables */
 bool running;
 unsigned int mode;
