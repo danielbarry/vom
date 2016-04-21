@@ -204,6 +204,8 @@ void main_loop(){
         /* Figure out what is to be done */
         switch(chr){
           case 27 :
+            /* Clear output */
+            layout_clear_type_buffer();
             /* Go to command mode if escape pressed */
             mode = MODE_CMD;
             break;
