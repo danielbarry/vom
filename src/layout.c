@@ -11,6 +11,9 @@
 #include <stdlib.h>
 #include "display.c"
 
+/* Definitions */
+#define TYPE_LEN 255
+
 /* Methods */
 void layout_init();
 char layout_get_char();
@@ -18,6 +21,8 @@ char layout_get_char();
 /* Variables */
 unsigned int curX;
 unsigned int curY;
+unsigned int typeLen;
+char typeBuffer[TYPE_LEN];
 
 /**
  * layout_init()
