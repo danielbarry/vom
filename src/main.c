@@ -121,6 +121,8 @@ void main_init(){
  * press.
  **/
 void main_loop(){
+  unsigned int tLen;
+  char* tBuffer;
   /* Initialise the display */
   layout_init();
   /* Run forever whilst the program is running */
@@ -150,6 +152,32 @@ void main_loop(){
       case MODE_TYP :
         /* Figure out what is to be done */
         switch(chr){
+          case 10 :
+          case 13 :
+            /* Get information for the type buffer */
+            tLen = layout_get_type_length();
+            tBuffer = layout_get_type_buffer();
+            /* Is there anything worth processing? */
+            if(tLen > 0){
+              /* Is it a command we want to run */
+              if(tBuffer[0] == ':'){
+                /* Iterate through command characters */
+                for(unsigned x = 1; x < tLen; x++){
+                  switch(tBuffer[x]){
+                    case 'q' :
+                      /* TODO: Check whether we should save. */
+                      running = false;
+                      break;
+                    default :
+                      /* TODO: Handle error case. */
+                      /* Clear output */
+                      layout_clear_type_buffer();
+                      break;
+                  }
+                }
+              }
+            }
+            break;
           case 27 :
             /* Go to back to command mode if escape pressed */
             mode = MODE_CMD;
