@@ -111,6 +111,7 @@ void main_version(){
  **/
 void main_init(){
   running = true;
+  mode = MODE_CMD;
 }
 
 /**
