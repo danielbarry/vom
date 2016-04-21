@@ -81,6 +81,10 @@ void layout_update(){
   for(unsigned int x = 13; x < len; x++){
     buffer[x] = ' ';
   }
+  /* Update last line with last width characters in type buffer */
+  for(unsigned int x = typeLen > width ? typeLen - width : 0; x < typeLen; x++){
+    buffer[(width * (height - 1)) + x] = typeBuffer[x];
+  }
   /* Run the update in the display */
   display_update(buffer, len);
   /* Free the memory */
