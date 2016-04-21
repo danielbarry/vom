@@ -122,7 +122,7 @@ void main_init(){
 void main_loop(){
   /* Initialise the display */
   layout_init();
-  /* TODO: Write this code. */
+  /* Run forever whilst the program is running */
   while(running){
     /* Update the display */
     layout_update();
