@@ -50,3 +50,13 @@ char layout_get_char(){
  **/
 void layout_update(){
 }
+
+/**
+ * layout_quit()
+ *
+ * Quits the display.
+ **/
+void layout_quit(){
+  /* Run display quit */
+  display_quit();
+}
