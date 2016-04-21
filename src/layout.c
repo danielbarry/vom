@@ -21,6 +21,7 @@ void layout_update();
 void layout_update_type(char c);
 char* layout_get_type_buffer();
 unsigned int layout_get_type_length();
+void layout_set_type_buffer(char* chrs);
 void layout_clear_type_buffer();
 
 /* Variables */
@@ -155,6 +156,31 @@ char* layout_get_type_buffer(){
  **/
 unsigned int layout_get_type_length(){
   return typeLen;
+}
+
+/**
+ * layout_set_type_buffer()
+ *
+ * Sets the data in characters in the type buffer.
+ *
+ * @param chrs The characters to set the buffer too.
+ **/
+void layout_set_type_buffer(char* chrs){
+  /* Set initial buffer size to zero */
+  typeLen = 0;
+  /* Iterate until we reach the end of the string or maximum */
+  for(unsigned int x = 0; x < TYPE_LEN; x++){
+    /* Check if the end has been reached */
+    if(chrs[x] != '\0'){
+      /* Add character to the buffer */
+      typeBuffer[x] = chrs[x];
+      /* Increment size */
+      typeLen++;
+    }else{
+      /* Stop processing */
+      break;
+    }
+  }
 }
 
 /**
