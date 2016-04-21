@@ -72,14 +72,6 @@ void display_update(){
   /* Update the display dimensions */
   display_update_dimensions();
   /* TODO: Write this code. */
-  display_draw(0, 0, '#'); // TODO: Remove me.
-  display_draw(1, 0, '0'); // TODO: Remove me.
-  display_draw(0, 1, '{'); // TODO: Remove me.
-  display_draw(1, 1, '+'); // TODO: Remove me.
-  display_draw(2, 0, 'a'); // TODO: Remove me.
-  display_draw(3, 0, 'b'); // TODO: Remove me.
-  display_draw(2, 1, 'c'); // TODO: Remove me.
-  display_draw(3, 1, 'd'); // TODO: Remove me.
   /* Refresh the display */
   refresh();
 }
