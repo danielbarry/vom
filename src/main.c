@@ -125,7 +125,7 @@ void main_loop(){
   /* TODO: Write this code. */
   while(running){
     /* Update the display */
-    display_update();
+    layout_update();
     /* Get the next character */
     char chr = display_get_char();
     /* Operation based on current mode */

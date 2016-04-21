@@ -42,3 +42,11 @@ char layout_get_char(){
   /* Returns a character */
   return display_get_char();
 }
+
+/**
+ * layout_update()
+ *
+ * Updates the layout.
+ **/
+void layout_update(){
+}
