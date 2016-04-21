@@ -155,7 +155,8 @@ void main_loop(){
             mode = MODE_CMD;
             break;
           default :
-            /* TODO: Requires printing. */
+            /* Update the type buffer */
+            layout_update_type(chr);
             break;
         }
         break;
