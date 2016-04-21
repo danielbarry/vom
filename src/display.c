@@ -154,7 +154,10 @@ void display_colourize(char c){
   ){
     attribute = COLOUR_PAIR;
   }
-  if(c >= '!' && c <= '&'){
+  if(
+    (c >= '!' && c <= '&') ||
+    (c >= ':' && c <= '@')
+  ){
     attribute = COLOUR_OTHR;
   }
   attron(COLOR_PAIR(attribute));
