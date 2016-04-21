@@ -148,6 +148,8 @@ void main_loop(){
             mode = MODE_TYP;
             break;
           case 'i' :
+            /* Set the type buffer to be the mode */
+            layout_set_type_buffer(MSG_INS);
             /* Switch to insert mode */
             mode = MODE_INS;
             break;
