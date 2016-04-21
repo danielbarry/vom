@@ -54,6 +54,8 @@ void layout_update(){
   unsigned int len = display_get_width() * display_get_height();
   /* Build a buffer of the right size */
   char* buffer = (char*)malloc(len * sizeof(char));
+  /* Run the update in the display */
+  display_update(buffer, len);
   /* Free the memory */
   free(buffer);
 }
