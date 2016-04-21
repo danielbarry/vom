@@ -35,6 +35,8 @@ void layout_init(){
   /* Set cursor X and Y to default position */
   curX = 0;
   curY = 0;
+  /* Set type length buffer size to zero */
+  typeLen = 0;
 }
 
 /**
