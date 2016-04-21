@@ -100,3 +100,28 @@ void layout_quit(){
   /* Run display quit */
   display_quit();
 }
+
+/**
+ * layout_update_type()
+ *
+ * Update the type buffer to reflect the addition of a character destined for
+ * the buffer.
+ *
+ * @param c The character to be considered.
+ **/
+void layout_update_type(char c){
+  /* Check if the character is deleted */
+  if(c == 8 || c == 127){
+    /* Make sure buffer is not already at the beginning */
+    if(typeLen > 0){
+      typeLen--;
+    }
+  }else{
+    /* Check if we won't exceed our buffer */
+    if(typeLen < TYPE_LEN){
+      /* Update the type buffer */
+      typeBuffer[typeLen] = c;
+      typeLen++;
+    }
+  }
+}
