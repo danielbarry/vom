@@ -176,11 +176,12 @@ void main_loop(){
                     case 'q' :
                       /* TODO: Check whether we should save. */
                       running = false;
-                      break;
-                    default :
-                      /* TODO: Handle error case. */
                       /* Clear output */
                       layout_clear_type_buffer();
+                      break;
+                    default :
+                      /* Message an error */
+                      layout_set_type_buffer(MSG_ERR);
                       break;
                   }
                 }
