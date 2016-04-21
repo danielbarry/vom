@@ -8,6 +8,7 @@
  **/
 
 /* Includes */
+#include <stdlib.h>
 #include "display.c"
 
 /* Methods */
@@ -51,6 +52,10 @@ char layout_get_char(){
 void layout_update(){
   /* Length of the bag */
   unsigned int len = display_get_width() * display_get_height();
+  /* Build a buffer of the right size */
+  char* buffer = (char*)malloc(len * sizeof(char));
+  /* Free the memory */
+  free(buffer);
 }
 
 /**
