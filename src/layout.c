@@ -82,8 +82,12 @@ void layout_update(){
     buffer[x] = ' ';
   }
   /* Update last line with last width characters in type buffer */
+  int p = 0;
   for(unsigned int x = typeLen > width ? typeLen - width : 0; x < typeLen; x++){
-    buffer[(width * (height - 1)) + x] = typeBuffer[x];
+    /* Update the character in the buffer with the new data */
+    buffer[(width * (height - 1)) + p] = typeBuffer[x];
+    /* Update type position for display */
+    p++;
   }
   /* Run the update in the display */
   display_update(buffer, len);
