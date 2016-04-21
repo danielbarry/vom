@@ -54,6 +54,24 @@ void layout_update(){
   unsigned int len = display_get_width() * display_get_height();
   /* Build a buffer of the right size */
   char* buffer = (char*)malloc(len * sizeof(char));
+  /* TODO: Remove these lines. */
+  buffer[0] = '{';
+  buffer[1] = '"';
+  buffer[2] = 'a';
+  buffer[3] = '"';
+  buffer[4] = ':';
+  buffer[5] = '"';
+  buffer[6] = 'b';
+  buffer[7] = '@';
+  buffer[8] = 'c';
+  buffer[9] = '.';
+  buffer[10] = 'd';
+  buffer[11] = '"';
+  buffer[12] = '}';
+  /* Fill rest of buffer with blanks */
+  for(unsigned int x = 13; x < len; x++){
+    buffer[x] = ' ';
+  }
   /* Run the update in the display */
   display_update(buffer, len);
   /* Free the memory */
