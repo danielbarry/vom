@@ -16,7 +16,7 @@ This code is a simple file editor for text files built in the same spirit as
 
 The following are the main goals of the program:
 
-  * Small file size (< 50kB)
+  * Small binary size (< 50kB)
   * Simple use (lower number of commands)
   * Automatic colouring
   * Fast
