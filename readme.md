@@ -50,7 +50,7 @@ reason, please raise a ticket on GitHub.
 
 To build the code, please run the following command:
 
-    gcc -g src/main.c -lcurses -o vom
+    gcc -s -Os src/main.c -lcurses -o vom
 
 ### Documentation
 
