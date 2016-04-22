@@ -8,6 +8,7 @@
  **/
 
 /* Includes */
+#include "file.c"
 #include "layout.c"
 #include <stdio.h>
 
