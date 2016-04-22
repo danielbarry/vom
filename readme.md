@@ -52,6 +52,14 @@ To build the code, please run the following command:
 
     gcc -s -Os src/main.c -lcurses -o vom
 
+The reasons for the parameters are as follows:
+
+  * `-s`         - Strip debug symbols on build.
+  * `-Os`        - Optimise the binary for file size.
+  * `src/main.c` - Entry file into the program.
+  * `-lcurses`   - Add the `curses` library for compilation.
+  * `-o vom`     - Set the output binary file name as `vom`.
+
 ### Documentation
 
 To build the documentation, please run the following commands depending on the
