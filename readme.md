@@ -42,7 +42,7 @@ To install the required packages, please run the following (Debian):
   * `pandoc` - Allows compilation of the documentation
 
 If you require more libraries or this documentation is out of date for any
-reason, please contact me.
+reason, please raise a ticket on GitHub.
 
 ## (5) Build
 
