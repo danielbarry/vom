@@ -24,3 +24,12 @@ set(CMAKE_C_FLAGS "-Os -Wall")
 # Strip out the debug symbols from the binary
 # NOTE: Setting the build type doesn't appear to do this effectively.
 set(CMAKE_EXE_LINKER_FLAGS "-s")
+
+# Run static code analysis
+add_custom_command(
+  OUTPUT results.txt
+  COMMAND cppcheck src
+  DEPENDS src
+  COMMENT "Running Static Code Analysis"
+)
+add_custom_target(run ALL DEPENDS results.txt)
