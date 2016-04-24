@@ -15,6 +15,7 @@
 /* Methods */
 void file_init();
 char* file_open(char* filename);
+char* file_close();
 
 /* Constants */
 const char* FILE_ATT = (char*)"r+b";
@@ -57,4 +58,26 @@ char* file_open(char* filename){
     /* Return a bad message */
     return FILE_MSG_BAD;
   }
+}
+
+/**
+ * file_close()
+ *
+ * Closes a file if it is open.
+ **/
+char* file_close(){
+  /* Make sure the file is open */
+  if(open){
+    /* Make sure the file pointer is not NULL */
+    if(file != NULL){
+      /* Close the file */
+      int res = fclose(file);
+      /* Figure out whether the operation was successful */
+      if(res == 0){
+        return FILE_MSG_OK;
+      }
+    }
+  }
+  /* By default, return bad */
+  return FILE_MSG_BAD;
 }
