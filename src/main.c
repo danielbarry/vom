@@ -76,6 +76,8 @@ int main(int argc, char** argv){
     }else{
       /* Initialise the main program */
       main_init();
+      /* Initialise the display */
+      layout_init();
       /* Look over character for main program control */
       main_loop();
       /* TODO: Load file. */
@@ -134,8 +136,6 @@ void main_loop(){
   unsigned int x;
   unsigned int tLen;
   char* tBuffer;
-  /* Initialise the display */
-  layout_init();
   /* Run forever whilst the program is running */
   while(running){
     /* Update the display */
