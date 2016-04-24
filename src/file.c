@@ -27,3 +27,14 @@ void file_init(){
   /* Indicate that there is no file open */
   open = false;
 }
+
+/**
+ * file_open()
+ *
+ * Opens a file for reading and writing.
+ *
+ * @param filename The path of the file.
+ **/
+void file_open(){
+  /* TODO: Write this code. */
+}
