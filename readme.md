@@ -34,8 +34,10 @@ Below is some examples of the system in use:
 
 To install the required packages, please run the following (Debian):
 
-    sudo apt-get install gcc git libncurses5-dev pandoc
+    sudo apt-get install cmake cppcheck gcc git libncurses5-dev pandoc
 
+  * `cmake`           - Allows for easy building of the system.
+  * `cppcheck`        - Static code analysis for C/C++.
   * `gcc`             - Allows compilation of the source code.
   * `git`             - Access to the repository.
   * `libncurses5-dev` - Library for the UI of the text editor.
@@ -48,17 +50,13 @@ reason, please raise a ticket on GitHub.
 
 ### Code
 
-To build the code, please run the following command:
+Initially, you'll need to run the following command once:
 
-    gcc -s -Os src/main.c -lcurses -o vom
+    cmake .
 
-The reasons for the parameters are as follows:
+After this, only the following command should be required:
 
-  * `-s`         - Strip debug symbols on build.
-  * `-Os`        - Optimise the binary for file size.
-  * `src/main.c` - Entry file into the program.
-  * `-lcurses`   - Add the `curses` library for compilation.
-  * `-o vom`     - Set the output binary file name as `vom`.
+    make
 
 ### Documentation
 
