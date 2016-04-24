@@ -14,6 +14,7 @@
 
 /* Methods */
 void file_init();
+char* file_open(char* filename);
 
 /* Constants */
 const char* FILE_ATT = (char*)"r+b";
@@ -41,6 +42,6 @@ void file_init(){
  *
  * @param filename The path of the file.
  **/
-void file_open(){
-  /* TODO: Write this code. */
+char* file_open(char* filename){
+    return FILE_MSG_BAD;
 }
