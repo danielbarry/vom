@@ -78,9 +78,10 @@ int main(int argc, char** argv){
       main_init();
       /* Initialise the display */
       layout_init();
+      /* Load file and display result */
+      layout_set_type_buffer(file_open(argv[x]));
       /* Look over character for main program control */
       main_loop();
-      /* TODO: Load file. */
       /* Force loop exit */
       x = len;
     }
