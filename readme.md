@@ -60,16 +60,7 @@ After this, only the following command should be required:
 
 ### Documentation
 
-To build the documentation, please run the following commands depending on the
-output you require:
-
-#### PDF
-
-    pandoc readme.md -s -o readme.pdf
-
-#### HTML
-
-    pandoc readme.md -s -o readme.html
+To build the documentation, only a `make` is required.
 
 ## (6) About
 
