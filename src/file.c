@@ -15,6 +15,9 @@
 /* Methods */
 void file_init();
 
+/* Constants */
+const char* FILE_ATT = (char*)"r+b";
+
 /* Variables */
 FILE* file;
 bool open;
