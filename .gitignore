@@ -1,4 +1,12 @@
+# Single Files
+CMakeCache.txt
+Makefile
 vom
 
+# File extensions
+*.cmake
 *.html
 *.pdf
+
+# File directories
+CMakeFiles/**
