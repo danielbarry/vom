@@ -32,4 +32,20 @@ add_custom_command(
   DEPENDS src
   COMMENT "Running Static Code Analysis"
 )
-add_custom_target(run ALL DEPENDS results.txt)
+# Build PDF documentation
+add_custom_command(
+  OUTPUT readme.pdf
+  COMMAND pandoc readme.md -s -o readme.pdf
+  DEPENDS readme.md
+  COMMENT "Building PDF documentation"
+)
+# Build HTML documentation
+add_custom_command(
+  OUTPUT readme.html
+  COMMAND pandoc readme.md -s -o readme.html
+  DEPENDS readme.md
+  COMMENT "Building HTML documentation"
+)
+add_custom_target(run-analysis ALL DEPENDS results.txt)
+add_custom_target(run-doc-pdf ALL DEPENDS readme.pdf)
+add_custom_target(run-doc-html ALL DEPENDS readme.html)
