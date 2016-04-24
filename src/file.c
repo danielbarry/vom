@@ -16,6 +16,7 @@
 void file_init();
 
 /* Variables */
+FILE* file;
 bool open;
 
 /**
@@ -24,6 +25,8 @@ bool open;
  * Initialises the system so that it is ready to handle file operations.
  **/
 void file_init(){
+  /* Set the file pointer to NULL */
+  file = NULL;
   /* Indicate that there is no file open */
   open = false;
 }
