@@ -227,6 +227,11 @@ void main_loop(){
         break;
     }
   }
+  /* Close file */
+  layout_set_type_buffer(file_close());
+  /* Wait for user to read and update display */
+  layout_update();
+  layout_get_char();
   /* Release the display */
   layout_quit();
 }
