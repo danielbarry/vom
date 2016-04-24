@@ -63,6 +63,7 @@ char layout_get_char(){
  * Updates the layout.
  **/
 void layout_update(){
+  unsigned int x;
   /* Length of the bag */
   unsigned int width = display_get_width();
   unsigned int height = display_get_height();
@@ -84,12 +85,12 @@ void layout_update(){
   buffer[11] = '"';
   buffer[12] = '}';
   /* Fill rest of buffer with blanks */
-  for(unsigned int x = 13; x < len; x++){
+  for(x = 13; x < len; x++){
     buffer[x] = ' ';
   }
   /* Update last line with last width characters in type buffer */
   int p = 0;
-  for(unsigned int x = typeLen > width ? typeLen - width : 0; x < typeLen; x++){
+  for(x = typeLen > width ? typeLen - width : 0; x < typeLen; x++){
     /* Update the character in the buffer with the new data */
     buffer[(width * (height - 1)) + p] = typeBuffer[x];
     /* Update type position for display */
@@ -166,10 +167,11 @@ unsigned int layout_get_type_length(){
  * @param chrs The characters to set the buffer too.
  **/
 void layout_set_type_buffer(char* chrs){
+  unsigned int x;
   /* Set initial buffer size to zero */
   typeLen = 0;
   /* Iterate until we reach the end of the string or maximum */
-  for(unsigned int x = 0; x < TYPE_LEN; x++){
+  for(x = 0; x < TYPE_LEN; x++){
     /* Check if the end has been reached */
     if(chrs[x] != '\0'){
       /* Add character to the buffer */

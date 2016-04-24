@@ -72,8 +72,9 @@ void display_init(){
  * @param len The length of the buffer.
  **/
 void display_update(char* buffer, unsigned int len){
+  unsigned int x;
   /* Display characters to the display */
-  for(unsigned int x = 0; x < len; x++){
+  for(x = 0; x < len; x++){
     /* Draw the buffer */
     /* TODO: Modulo and divide are very costly. */
     display_draw(x / width, x % width, buffer[x]);
