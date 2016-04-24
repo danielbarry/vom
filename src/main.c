@@ -68,7 +68,8 @@ int main(int argc, char** argv){
             main_version();
             break;
           default :
-            /* TODO: Handle error. */
+            /* Handle error */
+            layout_set_type_buffer(MSG_ERR);
             break;
         }
       }
