@@ -16,6 +16,7 @@
 void file_init();
 char* file_open(char* filename);
 char* file_close();
+void file_set_pos(long int pos);
 char file_read();
 
 /* Constants */
@@ -81,6 +82,20 @@ char* file_close(){
   }
   /* By default, return bad */
   return FILE_MSG_BAD;
+}
+
+/**
+ * file_set_pos()
+ *
+ * Set the position in the file to set the read/write position to. No error is
+ * given by this function as it is the responsibility of the caller not to
+ * overrun the file in either direction.
+ *
+ * @param pos The position in the file.
+ **/
+void file_set_pos(long int pos){
+  /* Set the position relative to the beginning of the file */
+  fseek(file, pos, SEEK_SET);
 }
 
 /**
