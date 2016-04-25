@@ -16,6 +16,7 @@
 void file_init();
 char* file_open(char* filename);
 char* file_close();
+char file_read();
 
 /* Constants */
 const char* FILE_ATT = (char*)"r+b";
@@ -80,4 +81,17 @@ char* file_close(){
   }
   /* By default, return bad */
   return FILE_MSG_BAD;
+}
+
+/**
+ * file_read()
+ *
+ * Reads a character from the file stream, returning an EOF if the end of the
+ * file is reached.
+ *
+ * @return The character that has been read.
+ **/
+char file_read(){
+  /* Get the next character from the file */
+  return (char)fgetc(file);
 }
