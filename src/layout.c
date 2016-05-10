@@ -17,7 +17,7 @@
 /* Methods */
 void layout_init();
 char layout_get_char();
-void layout_update();
+void layout_update(bool mode);
 void layout_update_type(char c);
 char* layout_get_type_buffer();
 unsigned int layout_get_type_length();
@@ -61,8 +61,11 @@ char layout_get_char(){
  * layout_update()
  *
  * Updates the layout.
+ *
+ * @param mode The cursor mode for the text editor update, false for window and
+ * true for command.
  **/
-void layout_update(){
+void layout_update(bool mode){
   unsigned int x;
   /* Length of the bag */
   unsigned int width = display_get_width();
@@ -98,6 +101,12 @@ void layout_update(){
   }
   /* Run the update in the display */
   display_update(buffer, len);
+  /* Work out if we are in typing mode */
+  if(mode){
+    display_set_position(height - 1, typeLen);
+  }else{
+    display_set_position(curX, curY);
+  }
   /* Free the memory */
   free(buffer);
 }
