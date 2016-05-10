@@ -137,6 +137,8 @@ void main_loop(){
   unsigned int x;
   unsigned int tLen;
   char* tBuffer;
+  /* Absorb the first key press */
+  layout_get_char();
   /* Run forever whilst the program is running */
   while(running){
     /* Update the display */
