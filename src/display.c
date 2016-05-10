@@ -149,8 +149,8 @@ void display_draw(unsigned int x, unsigned int y, char c){
     /* Colourize characters as they come through */
     display_colourize(c);
   }
-  /* Get character to given position */
-  move(x, y);
+  /* Set cursor to given position */
+  display_set_position(x, y);
   /* Delete the character currently in the position */
   delch();
   /* Insert a new character into the new position */
