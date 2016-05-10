@@ -148,6 +148,10 @@ void main_loop(){
       case MODE_CMD :
         /* Figure out what is to be done */
         switch(chr){
+          case 27 :
+            /* Clear output */
+            layout_clear_type_buffer();
+            break;
           case ':' :
             /* Print the command character */
             layout_update_type(chr);
