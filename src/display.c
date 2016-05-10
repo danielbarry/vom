@@ -23,6 +23,7 @@ void display_update();
 char display_get_char();
 void display_quit();
 void display_update_dimensions();
+void display_set_position(unsigned int x, unsigned int y);
 void display_draw(unsigned int x, unsigned int y, char c);
 void display_colourize(char c);
 unsigned int display_get_width();
@@ -116,6 +117,21 @@ void display_quit(){
 void display_update_dimensions(){
   /* Update the width and height */
   getmaxyx(window, height, width);
+}
+
+/**
+ * display_set_position()
+ *
+ * Sets the position of the cursor on the display.
+ *
+ * NOTE: The cursor position should be set to a valid position in the window.
+ *
+ * @param x The X position of the cursor.
+ * @param y The Y position of the cursor.
+ **/
+void display_set_position(unsigned int x, unsigned int y){
+  /* Get character to requested position */
+  move(x, y);
 }
 
 /**
