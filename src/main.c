@@ -140,7 +140,7 @@ void main_loop(){
   /* Run forever whilst the program is running */
   while(running){
     /* Update the display */
-    layout_update();
+    layout_update(mode != MODE_INS && mode != MODE_CMD);
     /* Get the next character */
     char chr = layout_get_char();
     /* Operation based on current mode */
@@ -230,7 +230,7 @@ void main_loop(){
   /* Close file */
   layout_set_type_buffer(file_close());
   /* Wait for user to read and update display */
-  layout_update();
+  layout_update(mode != MODE_INS && mode != MODE_CMD);
   layout_get_char();
   /* Release the display */
   layout_quit();
